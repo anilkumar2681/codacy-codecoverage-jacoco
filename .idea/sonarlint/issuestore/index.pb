@@ -3,8 +3,6 @@ j
 :app/src/main/java/com/team07/demokotlindsl/MainActivity.kt,0\6\06f750b67ba3a1d7a5e0c4e8ddda370dbff239d2
 M
 buildSrc/script-jacoco.gradle,6\3\63640cad5a02de561dab922ee26bffb16a25bbaf
-Q
-!buildSrc/jacoco-report.gradle.kts,e\5\e5e530b3eb3e0dfaa3af10daf4676d471f05b01d
 I
 buildSrc/build.gradle.kts,d\9\d90b697280fada81e52ec92d24725920f1cb087b
 F
@@ -27,8 +25,6 @@ X
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
-T
-$buildSrc/src/main/kotlin/Versions.kt,d\f\df7250bdfd4d4cbe77a1ebc3b950afc6e6bcfecd
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 :
@@ -36,7 +32,3 @@ $buildSrc/src/main/kotlin/Versions.kt,d\f\df7250bdfd4d4cbe77a1ebc3b950afc6e6bcf
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 @
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
-X
-(buildSrc/src/main/kotlin/Dependencies.kt,9\2\92eeab422bcb3e6e30d024383a103af19de3267b
-V
-&buildSrc/src/main/kotlin/ConfigData.kt,d\9\d900ab1a88ba5970ee67489737e57538f24f7067

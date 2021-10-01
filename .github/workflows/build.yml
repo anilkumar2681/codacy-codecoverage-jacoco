@@ -34,5 +34,5 @@ jobs:
           env:
             CI: true
 
-      -   name: "git diff --exit-code"
-          run: git diff --exit-code
+#      -   name: "git diff --exit-code"
+#          run: git diff --exit-code
