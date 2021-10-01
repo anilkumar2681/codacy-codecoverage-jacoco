@@ -1,0 +1,38 @@
+
+name: CI
+
+on: [ push, pull_request ]
+
+jobs:
+
+  build:
+
+    name: "Check"
+
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+      -   name: "git clone"
+          uses: actions/checkout@v2
+
+      -   name: "setup jdk"
+          uses: actions/setup-java@v2
+          with:
+            java-version: 8
+            distribution: temurin
+
+      -   name: "./gradlew build"
+          uses: gradle/gradle-build-action@v2.0-beta.1
+          with:
+            arguments: --scan --no-daemon build
+          env:
+            CI: true
+
+      -   name: "git diff --exit-code"
+          run: git diff --exit-code
