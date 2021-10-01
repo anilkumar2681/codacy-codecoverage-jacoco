@@ -1,0 +1,33 @@
+name: Unit Test
+
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  android-unit-test-debug:
+    runs-on: hs-android
+    env:
+      SECRETS_PATH: secret/non-prod/clients/cloud
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: set up JDK 1.11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+
+      - name: Build and Lint check with Gradle
+        run: . fetch_config $SECRETS_PATH && chmod +x gradlew && ./scripts/unit_test_debug.sh
