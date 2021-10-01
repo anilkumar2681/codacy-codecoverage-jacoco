@@ -1,9 +1,7 @@
 name: Unit Test
 
-on:
-  pull_request:
-    branches:
-      - master
+on: [ push, pull_request ]
+  
 jobs:
   android-unit-test-debug:
     runs-on: windows-latest
