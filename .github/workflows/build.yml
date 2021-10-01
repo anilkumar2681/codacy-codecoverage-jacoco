@@ -10,7 +10,7 @@ jobs:
     name: "Check"
 
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
 
