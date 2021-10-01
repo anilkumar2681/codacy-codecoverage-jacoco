@@ -6,9 +6,7 @@ on:
       - master
 jobs:
   android-unit-test-debug:
-    runs-on: hs-android
-    env:
-      SECRETS_PATH: secret/non-prod/clients/cloud
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Repository
