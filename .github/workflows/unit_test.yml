@@ -1,7 +1,7 @@
 name: Unit Test
 
 on: [ push, pull_request ]
-  
+
 jobs:
   android-unit-test-debug:
     runs-on: windows-latest
@@ -26,4 +26,4 @@ jobs:
           java-version: 1.11
 
       - name: Build and Lint check with Gradle
-        run: . fetch_config $SECRETS_PATH && chmod +x gradlew && ./scripts/unit_test_debug.sh
+        run: chmod +x gradlew && ./scripts/unit_test_debug.sh

@@ -8,12 +8,10 @@ jobs:
   build:
 
     name: "Check"
-
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest]
-
     runs-on: ${{ matrix.os }}
 
     steps:
